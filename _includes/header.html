@@ -7,12 +7,12 @@
 
   <ul class="menu">
     <li>
-      <a href="/index.html" class="logo-link">
+     <a href="{{ '/' | relative_url }}" class="logo-link">
         <img src="{{ '/img/MCD_Logo_w.png' | relative_url }}" alt="MCDロゴ">
       </a>
     </li>
     {% if page.special_header %}
-    <li><a href="/index.html#top">トップ</a></li>
+    <li><a href="/#top">トップ</a></li>
     <li><a href="/index.html#about">事業紹介</a></li>
     <li><a href="/index.html#Works">M.C.Dの技術</a></li>
     <li><a href="/index.html#flow">仕事の流れ</a></li>
