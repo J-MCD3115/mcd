@@ -1,5 +1,8 @@
 title: My Site
 
+url: "https://j-mcd3115.github.io/mcd/"
+baseurl: "/my-site"
+
 defaults:
   - scope:
       path: ""
