@@ -596,6 +596,9 @@ footer .flex-box {
 .footerFlex div:first-child {
   width: 30%;
 }
+.footerFlex div:last-child {
+  width: 60%;
+}
 .footerFlex p {
   padding-left: 10px;
   font-size: 1.2em;
