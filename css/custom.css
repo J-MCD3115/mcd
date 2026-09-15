@@ -1,0 +1,130 @@
+@charset "UTF-8";
+
+body {
+  margin-top: 100px !important;
+}
+
+h1 {
+  font-size: 2em;
+  color: #00a2dd;
+  text-align: left;
+}
+h1 span {
+  display: block;
+  font-size: 0.8em;
+}
+h2 {
+  font-size: 1.3em;
+  border: 3px #00a2dd solid;
+  padding: 10px;
+}
+h3 {
+  border-bottom: 2px #00a2dd solid;
+  padding-bottom: 5px;
+}
+h3 span {
+  margin-right: 8px;
+  background-color: #00a2dd;
+  padding: 4px 11px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.custombox {
+  padding-bottom: 30px;
+}
+
+.flex-box div {
+  padding: 10px;
+}
+
+table.recruitbox th,
+table.recruitbox td {
+  padding: 10px;
+  border-bottom: solid 1px #00a2dd;
+}
+table.recruitbox th {
+  width: 25%;
+}
+
+/* -----works----- */
+.flowchart {
+  display: flex;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+}
+
+.flowchart.horizontal {
+  flex-direction: row;
+  align-items: flex-start;
+}
+.flowchart.horizontal .flow-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.flowchart.horizontal .flow-line {
+  position: relative;
+  width: 70px;
+  height: 3px;
+  margin-top: calc(48px / 2 - 3px / 2);
+  background-color: #e2e8f0;
+}
+.flowchart.horizontal .flow-line::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-style: solid;
+  border-width: 6px 0 6px 9px;
+  border-color: transparent transparent transparent #e2e8f0;
+}
+
+.flow-node {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background-color: #00a2dd;
+  color: #ffffff;
+  border: 2px solid #00a2dd;
+  font-size: 19px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  border-radius: 8px;
+}
+
+.flow-texts {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+  text-align: center;
+}
+
+.flow-label {
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    margin-top: 0 !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  table.recruitbox th,
+  table.recruitbox td {
+    display: block;
+    width: 100%;
+    border-bottom: initial;
+  }
+  table.recruitbox th {
+    background: #00a2dd;
+  }
+}

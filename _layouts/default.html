@@ -4,22 +4,28 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="description" content="株式会社ジーンズエムシーディは、東北最大規模の洗い加工工場です。高い技術力と生産性を追求しながら、次世代のモノづくりに向けた研究・開発にも取り組んでいます。" />
+    <meta
+      name="description"
+      content="株式会社ジーンズエムシーディは、東北最大規模の洗い加工工場です。高い技術力と生産性を追求しながら、次世代のモノづくりに向けた研究・開発にも取り組んでいます。"
+    />
 
     <meta property="og:url" content="url" />
-    <meta property="og:title" content="株式会社ジーンズエムシーディ | 東北最大規模の洗い加工工場" />
-    <meta property="og:type" content="website" />
-    <meta property="og:description" content="株式会社ジーンズエムシーディは、東北最大規模の洗い加工工場です。高い技術力と生産性を追求しながら、次世代のモノづくりに向けた研究・開発にも取り組んでいます。" />
     <meta
-      property="og:image"
-      content="{{ '/img/fabkn.png' | relative_url }}"
+      property="og:title"
+      content="株式会社ジーンズエムシーディ | 東北最大規模の洗い加工工場"
     />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="株式会社ジーンズエムシーディは、東北最大規模の洗い加工工場です。高い技術力と生産性を追求しながら、次世代のモノづくりに向けた研究・開発にも取り組んでいます。"
+    />
+    <meta property="og:image" content="{{ '/img/fabkn.png' | relative_url }}" />
     <meta property="og:site_name" content="MCD" />
     <meta property="og:locale" content="ja_JP" />
 
-        <!-- 後で消去 -->
+    <!-- 後で消去 -->
     <meta name="robots" content="noindex, nofollow" />
-    
+
     <link
       rel="icon"
       href="{{ '/img/fabkn.png' | relative_url }}"
@@ -51,6 +57,10 @@
       href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
     <title>MCD|東北最大規模の洗い加工工場</title>
 
     <link
@@ -60,6 +70,9 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
     <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}" />
+    {% if page.custom_css %}
+    <link rel="stylesheet" href="{{ page.custom_css | relative_url }}" />
+    {% endif %}
     <!-- <script src="{{ '../js/jquery-4.0.0.min.js' | relative_url }}"></script> -->
     <!-- 3.x 系の使用を推奨 -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -83,19 +96,22 @@
     <script src="{{ '/js/script.js' | relative_url }}"></script>
   </head>
 
+  {% include header.html %}
+
   <body>
     <div class="loading">
       <div class="loadingInr">
-        <img src="{{ '/img/MCD_Logo.png' | relative_url }}" alt="MCDロゴ">
-
+        <img src="{{ '/img/MCD_Logo.png' | relative_url }}" alt="MCDロゴ" />
       </div>
       <div class="spinner"></div>
     </div>
 
-    {% include header.html %}
-
     <div id="">
-      {% include fastview.html %}
+      {% if page.url == "/" %} {% include fastview.html %} {% else %}
+      <!-- <div class="mcd-pp">
+        <img src="img/MCD_Logo.png" alt="MCD" />
+      </div> -->
+      {% endif %}
 
       <div class="contents">{{ content }}</div>
 

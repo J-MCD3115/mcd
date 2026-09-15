@@ -140,24 +140,22 @@ $(function () {
 
   //モーダルウィンドウ
   const openButtons = document.querySelectorAll(".modal-open");
-const closeButtons = document.querySelectorAll(".modal-close");
-//→開く
-openButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const modalId = button.dataset.modal;
-    const modal = document.getElementById(modalId);
+  const closeButtons = document.querySelectorAll(".modal-close");
+  //→開く
+  openButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const modalId = button.dataset.modal;
+      const modal = document.getElementById(modalId);
 
-    modal.classList.add("is-open");
+      modal.classList.add("is-open");
+    });
   });
-});
-//→閉じる
-closeButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const modal = button.closest(".modal");
+  //→閉じる
+  closeButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const modal = button.closest(".modal");
 
-    modal.classList.remove("is-open");
+      modal.classList.remove("is-open");
+    });
   });
-});
-
-  
 });
