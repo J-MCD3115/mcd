@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://j-mcd3115.github.io/mcd/sitemap.xml
