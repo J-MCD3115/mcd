@@ -16,15 +16,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta
-      name="description"
-      content="株式会社ジーンズエムシーディは、秋田県秋田市を拠点にジーンズ・デニムの洗い加工、レーザー加工、染色・脱色加工などを行う生産拠点です。サステナブルな加工技術の研究開発にも取り組んでいます。"
-    />
+  property="og:description"
+  content="{{ page.description | default: site.description }}"
+/>
 
-    <meta property="og:url" content="url" />
+    <meta property="og:url" content="{{ page.url | absolute_url }}" />
     <meta
-      property="og:title"
-      content="株式会社ジーンズエムシーディ｜秋田のデニム・ジーンズ洗い加工"
-    />
+  property="og:title"
+  content="{{ page.title | default: site.title }}"
+/>
     <meta property="og:type" content="website" />
     <meta
       property="og:description"
@@ -102,6 +102,18 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
     <script src="{{ '/js/script.js' | relative_url }}"></script>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "株式会社ジーンズエムシーディ",
+  "url": "{{ site.url }}{{ site.baseurl }}/",
+  "logo": "{{ site.url }}{{ site.baseurl }}/img/MCD_Logo.png",
+  "description": "{{ site.description }}"
+}
+</script>
+    
   </head>
 
   {% include header.html %}
