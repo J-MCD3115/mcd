@@ -3,6 +3,9 @@ description: 株式会社ジーンズエムシーディは、秋田県秋田市�
 url: https://j-mcd3115.github.io
 baseurl: /mcd
 
+job_operator_url: "https://www.hellowork.mhlw.go.jp/kensaku/GECA110010.do?screenId=GECA110010&action=dispDetailBtn&kJNo=0501015454661&kJKbn=1&jGSHNo=zPN4%2FZqfv6ldAQd4X6VJ4w%3D%3D&fullPart=1&iNFTeikyoRiyoDtiID=&kSNo=&newArrived=&tatZngy=1&shogaiKbn=0"
+job_operator2_url: "https://www.hellowork.mhlw.go.jp/kensaku/GECA110020.do?screenId=GECA110020&action=dispDetailBtn&kjNo=0501016213561&jgshNo=zPN4%2FZqfv6ldAQd4X6VJ4w%3D%3D&kjKbn=1&fullPart=2&iNFTeikyoRiyoDtiID=&ksNo=&newArrived=&tatZngy=1"
+
 defaults:
   - scope:
       path: ""
